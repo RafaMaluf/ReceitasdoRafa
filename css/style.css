@@ -1,0 +1,294 @@
+/*ESTILO GERAL*/
+
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #fbfeed;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #081b2a;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fbfeed;
+    transition: .2s;
+}
+
+.btn-contato button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(45, 45, 45);
+    transform: scale(1.1)
+}
+
+h2.titulo{
+    color: #081b2a;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(6, 128, 142);
+}
+
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+.tam-logo{
+    max-width: 10rem;
+    height: auto;
+    border-radius: 50% 50%;
+    
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: black;
+    transform: scale(1.1);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/* ESTILO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #081b2a;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color:rgb(6, 128, 142);
+}
+
+.topo-do-site .txt-topo-site p{
+    margin: 40px 0px;
+    color: #081b2a;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO PRATOS PRINCIPAIS E SOBREMESAS */
+
+section.especialidade .slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+}
+section.especialidade .slider img{
+    width: 400px;
+    height: 270px;
+}
+
+section.especialidade{
+    padding: 40px 4%;
+}
+
+section.especialidade .flex{
+    gap: 60px;
+}
+
+.especialidade .especialidade-box{
+    color: #081b2a;
+    padding: 40px;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidade .especialidade-box:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 8px #081b2a6f;
+}
+
+.especialidade .especialidade-box h3{
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+section.especialidade .especialidade-box p{
+    color: #081b2a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+section.especialidade .especialidade-box p span{
+    color: rgb(6, 128, 142);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+section.especialidade input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    background-color: #081b2a6f; /* Cor de fundo quando não está marcado */
+    border-radius: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer; /* Adiciona o cursor de ponteiro */
+    position: relative;
+}
+
+section.especialidade input[type="checkbox"]:checked {
+    background-color: #081b2a; /* Cor de fundo quando está marcado */    
+}
+
+section.especialidade input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0.2rem;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+
+/* ESTILO FORMULARIO SUGESTÃO RECEITAS */
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #081b2a6f;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #081b2a;
+}
+
+form input::placeholder{
+    color: #081b2a;
+}
+form textarea::placeholder{
+    color: #081b2a;
+}
+
+form textarea{
+    resize: none;
+    height: 150px;
+    max-height: 150px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #081b2a;
+    color: #fbfeed;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.formulario h3{
+    text-align: center;
+    color: #081b2a;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.formulario h3 span{
+    color: rgb(6, 128, 142);
+    font-size: 19px;
+}
+
+
+@media screen and (max-width: 1020px){
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+}
