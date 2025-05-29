@@ -155,6 +155,8 @@ section.especialidade .flex{
 }
 
 .especialidade .especialidade-box{
+    max-width: 85vw;
+    max-height: 80svh
     color: #081b2a;
     padding: 40px;
     margin-top: 25px;
